@@ -11,7 +11,7 @@ param(
     $instances | `
     % { 
         Write-Host "Stopping $($_.name)" 
-        Stop-AzureVM -StayProvisioned -Force -Name $_.Name -ServiceName $_.ServiceName
+        Stop-AzureVM -Force -Name $_.Name -ServiceName $_.ServiceName
     }
 }
 
